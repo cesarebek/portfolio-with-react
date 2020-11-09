@@ -7,7 +7,7 @@ const AboutSection = () => {
     <div>
       <div className="description">
         <div className="title">
-          //I'm adding this HIDE div because I want to reveal the text
+          {/* I'm adding this HIDE div because I want to reveal the text */}
           <div className="hide">
             <h1>I work to develop</h1>
           </div>
