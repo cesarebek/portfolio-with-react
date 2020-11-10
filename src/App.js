@@ -5,12 +5,29 @@ import React from 'react';
 import GlobalStyle from './components/GlobaLStyle';
 //Import Pages
 import AboutMe from './Pages/AboutMe';
+import MyWork from './Pages/MyWork';
+import ContactMe from './Pages/ContactMe';
+//import Nav
+import Nav from './components/Nav';
+//Router
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <AboutMe />
+      <Nav />
+      <Switch>
+        <Route path="/" exact>
+          <AboutMe />
+        </Route>{' '}
+        <Route path="/work">
+          <MyWork />
+        </Route>
+        <Route path="/contact">
+          <ContactMe />
+        </Route>
+      </Switch>
     </div>
   );
 }

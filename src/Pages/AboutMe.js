@@ -7,7 +7,6 @@ import Nav from '../components/Nav';
 const AboutMe = () => {
   return (
     <>
-      <Nav />
       <AboutSection />
       <ServicesSection />
       <FaqSection />
