@@ -11,7 +11,7 @@ export const StyledLayout = styled.div`
 
 export const StyledDescription = styled.div`
   flex: 1;
-  padding: 6rem;
+  padding-right: 5rem;
   h2 {
     font-weight: lighter;
   }

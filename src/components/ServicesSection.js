@@ -16,7 +16,7 @@ const ServicesSection = () => {
       <StyledImage>
         <img src={home2} alt="camera" />
       </StyledImage>
-      <StyledDescription>
+      <StyledServicesDescription>
         <h2>
           High <span>quality</span> services
         </h2>
@@ -50,7 +50,7 @@ const ServicesSection = () => {
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
         </StyledCards>
-      </StyledDescription>
+      </StyledServicesDescription>
     </StyledServicesLayout>
   );
 };
@@ -64,7 +64,10 @@ const StyledServicesLayout = styled(StyledLayout)`
     padding: 2rem 0rem 4rem 0rem;
   }
 `;
-
+const StyledServicesDescription = styled(StyledDescription)`
+  padding-right: 0rem;
+  padding-left: 5rem;
+`;
 const StyledCards = styled.div`
   display: flex;
   flex-wrap: wrap;
