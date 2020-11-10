@@ -31,14 +31,13 @@ h2{
     font-weight: lighter;
     font-size: 4rem;
 }
-
 h3{
-    color: white;
+   color: white;
 }
 
 h4{
     font-weight:bold;
-    color: #23d977;
+    font-size:2rem;
 }
 
 span{
@@ -54,6 +53,7 @@ p{
     font-size: 1.4rem;
     line-height: 150%;
 }
+
 `;
 
 export default GlobalStyle;
