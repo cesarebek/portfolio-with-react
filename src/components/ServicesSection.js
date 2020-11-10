@@ -6,16 +6,21 @@ import clock from '../img/clock.svg';
 import diaphragm from '../img/diaphragm.svg';
 import money from '../img/money.svg';
 import teamwork from '../img/teamwork.svg';
+//import Styles
+import styled from 'styled-components';
+import { StyledLayout, StyledDescription, StyledImage } from '../styles';
 
 const ServicesSection = () => {
   return (
-    <div className="services">
-      <img src={home2} alt="camera" />
-      <div className="description">
-        <h1>
+    <StyledServicesLayout>
+      <StyledImage>
+        <img src={home2} alt="camera" />
+      </StyledImage>
+      <StyledDescription>
+        <h2>
           High <span>quality</span> services
-        </h1>
-        <div className="cards">
+        </h2>
+        <StyledCards>
           <div className="card">
             <div className="icon">
               <img src={clock} alt="clock" />
@@ -44,10 +49,25 @@ const ServicesSection = () => {
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </StyledCards>
+      </StyledDescription>
+    </StyledServicesLayout>
   );
 };
+
+const StyledServicesLayout = styled(StyledLayout)`
+  h2 {
+    padding-bottom: 5rem;
+  }
+  p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
+  }
+`;
+
+const StyledCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 export default ServicesSection;
