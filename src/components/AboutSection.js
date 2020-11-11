@@ -1,32 +1,61 @@
 import React from 'react';
 //This if I want to import an image from another folder
 import home1 from '../img/home1.png';
-import styled from 'styled-components';
 import {
   StyledLayout,
   StyledDescription,
   StyledHide,
   StyledImage,
 } from '../styles';
+//Framer Motion
+//If I want to style something, I've to add inside the tag motion.tag, example: <motion.h2></motion.h2>
+import { motion } from 'framer-motion';
+
+const titleAnim = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 2 } },
+};
+const containerAnim = {
+  hidden: { x: 100 },
+  show: {
+    x: 0,
+    transition: { duration: 0.75, staggerChildren: 1, when: 'afterChildren' },
+  },
+};
 
 const AboutSection = () => {
   return (
     <StyledLayout>
       <StyledDescription>
-        <div className="title">
+        <motion.div
+          className="title"
+          variants={containerAnim}
+          initial="hidden"
+          animate="show"
+        >
           {/* I'm adding this HIDE div because I want to reveal the text */}
           <StyledHide>
-            <h2>I work to develop</h2>
+            <motion.h2
+              // Animate is a live property
+              // animate={{ opacity: 1, transition: { duration: 2 } }}
+              // initial={{ opacity: 0 }}
+              //If I want to link an external list of props:
+              variants={titleAnim}
+              // initial="hidden"
+              // animate="show"
+            >
+              I work to develop
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>needs</span>
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>come true.</h2>
+            <motion.h2 variants={titleAnim}>come true.</motion.h2>
           </StyledHide>
-        </div>
+        </motion.div>
         <p>
           Contact me for any front and back end project, I'll be glad to develop
           all your needs for your business.
