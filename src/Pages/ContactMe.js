@@ -1,7 +1,7 @@
 import React from 'react';
 //import animation
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../components/animation';
+import { pageAnimation } from '../animation';
 
 const ContactMe = () => {
   return (

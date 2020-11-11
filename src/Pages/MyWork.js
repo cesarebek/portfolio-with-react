@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 //import animation
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../components/animation';
+import { pageAnimation } from '../animation';
 
 const MyWork = () => {
   return (

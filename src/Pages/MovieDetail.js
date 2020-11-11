@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { MovieState } from '../movieState';
 //import animation
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../components/animation';
+import { pageAnimation } from '../animation';
 
 const MovieDetail = () => {
   const history = useHistory();
