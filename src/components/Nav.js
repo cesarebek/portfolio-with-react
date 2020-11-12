@@ -35,6 +35,8 @@ const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  @media (max-width: 1300px) {
+  }
   ul {
     list-style-type: none;
     display: flex;
@@ -51,6 +53,22 @@ const StyledNav = styled.nav`
     font-size: 1.7rem;
     font-family: 'Lobster', cursive;
     font-weight: lighter;
+  }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    #logo {
+      display: inline-block;
+      margin: 2rem;
+    }
+    ul {
+      padding: 2rem 0rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
   }
 `;
 

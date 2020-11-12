@@ -9,11 +9,9 @@ const GlobalStyle = createGlobalStyle`
 
 html{
     @media (max-width: 1700px){
-        font-size: 80%;
+        font-size: 75%;
     }
-    @media (max-width: 1700px){
-        font-size: 80%;
-    }
+    
 
 }
 
