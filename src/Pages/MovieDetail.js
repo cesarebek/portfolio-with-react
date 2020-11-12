@@ -6,6 +6,8 @@ import { MovieState } from '../movieState';
 //import animation
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
+//import scroll Top component
+import ScrollTop from '../components/ScrollTop';
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -32,6 +34,7 @@ const MovieDetail = () => {
           animate="show"
           exit="exit"
         >
+          <ScrollTop />
           <StyledHeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="image" />

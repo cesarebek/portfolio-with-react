@@ -32,6 +32,9 @@ const StyledNav = styled.nav`
   color: white;
   padding: 1rem 10rem;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   ul {
     list-style-type: none;
     display: flex;
