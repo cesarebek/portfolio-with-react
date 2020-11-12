@@ -9,10 +9,20 @@ import teamwork from '../img/teamwork.svg';
 //import Styles
 import styled from 'styled-components';
 import { StyledLayout, StyledDescription, StyledImage } from '../styles';
+//import animation
+import { scrollReveal } from '../animation';
+//import scroll effect
+import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledServicesLayout>
+    <StyledServicesLayout
+      variants={scrollReveal}
+      initial="hidden"
+      animate={controls}
+      ref={element}
+    >
       <StyledImage>
         <img src={home2} alt="camera" />
       </StyledImage>
